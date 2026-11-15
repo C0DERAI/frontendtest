@@ -1,0 +1,17 @@
+.container {
+  width: min(calc(100% - 2 * var(--page-gutter)), var(--container-max-width));
+
+  margin-inline: auto;
+}
+
+.section {
+  width: 100%;
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.section__title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}

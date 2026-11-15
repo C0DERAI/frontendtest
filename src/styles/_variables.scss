@@ -1,0 +1,47 @@
+
+/* -----------------------------------
+   Brand colours
+----------------------------------- */
+
+$color-primary: #64d7de;
+$color-black: #000;
+$color-white: #fff;
+$color-text: #101010;
+
+/* -----------------------------------
+   Typography
+----------------------------------- */
+
+$font-primary: "Poppins", sans-serif;
+
+/* -----------------------------------
+   Layout
+----------------------------------- */
+
+$container-max-width: 1500px;
+$header-height: 80px;
+
+/* -----------------------------------
+   Breakpoints
+----------------------------------- */
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+
+/* -----------------------------------
+   CSS custom properties
+----------------------------------- */
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-text: #{$color-text};
+  --color-white: #{$color-white};
+
+  --font-primary: #{$font-primary};
+
+  --container-max-width: #{$container-max-width};
+  --header-height: #{$header-height};
+
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+}
