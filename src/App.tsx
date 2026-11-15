@@ -1,12 +1,19 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
 function App() {
-  const [count, setCount] = useState(0);
+  return (
+    <>
+      <div id="top" />
+      <Header />
 
-  return <></>;
+      <main>
+        <Hero />
+
+        {/* Add the remaining sections as you build them. */}
+      </main>
+    </>
+  );
 }
 
 export default App;
