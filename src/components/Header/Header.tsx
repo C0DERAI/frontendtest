@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import "./Header.scss";
 
 const navigationLinks = [
-  { name: "Home", href: "#menu" },
-  { name: "About", href: "/family" },
-  { name: "Services", href: "/find-us" },
+  { label: "Home", href: "#menu" },
+  { label: "About", href: "#family" },
+  { label: "Services", href: "#find-us" },
 ];
 
 export default function Header() {
