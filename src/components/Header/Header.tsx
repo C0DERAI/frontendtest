@@ -28,7 +28,7 @@ export default function Header() {
     };
   }, []);
 
-  // Allow the mobile menu to close with Escape.
+  // Allow the mobile menu to close with Esc key
   useEffect(() => {
     if (!isMenuOpen) return;
 

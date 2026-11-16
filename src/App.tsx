@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
@@ -9,8 +10,7 @@ function App() {
 
       <main>
         <Hero />
-
-        {/* Add the remaining sections as you build them. */}
+        <Menu />
       </main>
     </>
   );
