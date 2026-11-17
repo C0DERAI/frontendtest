@@ -3,6 +3,7 @@
 .location {
   width: 100%;
   padding-block: clamp(4rem, 7vw, 7rem);
+  font-family: vars.$font-primary;
 
   background-color: vars.$color-white;
   color: vars.$color-text;
@@ -14,9 +15,6 @@
       minmax(0, 1fr);
 
     align-items: center;
-    // gap: clamp(2rem, 5vw, 5rem);
-
-    // max-width: 1050px;
   }
 
   &__content {
