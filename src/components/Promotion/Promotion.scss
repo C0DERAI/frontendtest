@@ -4,6 +4,7 @@
   width: 100%;
   color: vars.$color-text;
   font-family: vars.$font-primary;
+  padding: 2rem 0;
 
   /* Main layout */
 
@@ -142,6 +143,20 @@
     &__media {
       min-height: 0;
       aspect-ratio: 4 / 3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promotion {
+    // Changing order. Display image first
+    &__media {
+      order: 1;
+    }
+
+    // Display text content after image
+    &__content {
+      order: 2;
     }
   }
 }

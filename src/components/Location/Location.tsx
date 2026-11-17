@@ -59,7 +59,11 @@ export default function Location() {
         </div>
       </section>
 
-      <MapDialog isOpen={isMapOpen} onClose={closeMap} />
+      <MapDialog
+        isOpen={isMapOpen}
+        onClose={closeMap}
+        triggerRef={mapButtonRef}
+      />
     </>
   );
 }
