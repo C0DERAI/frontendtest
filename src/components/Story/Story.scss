@@ -1,0 +1,140 @@
+@use "../../styles/variables" as vars;
+
+.story {
+  width: 100%;
+  padding-block: clamp(4rem, 7vw, 7rem);
+  font-family: vars.$font-primary;
+
+  background-color: vars.$color-white;
+  color: vars.$color-text;
+
+  /* Main two-column layout */
+
+  &__container {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+
+    max-width: 1050px;
+  }
+
+  /* Text column */
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__heading {
+    margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+
+    font-family: vars.$font-primary;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    max-width: 48ch;
+    margin: 0 0 1.5rem;
+
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  /* Social media links */
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+    min-width: 120px;
+    padding: 0.5rem 0.875rem;
+
+    border: 1px solid currentColor;
+
+    color: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+
+    transition:
+      background-color 200ms ease,
+      color 200ms ease;
+
+    &:hover {
+      background-color: vars.$color-black;
+      color: vars.$color-white;
+    }
+
+    &:focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 3px;
+    }
+  }
+
+  /* Image column */
+
+  &__media {
+    width: 100%;
+    aspect-ratio: 1.15;
+    overflow: hidden;
+
+    background-color: #f2f2f2;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 768px) {
+  .story {
+    padding-block: 4rem;
+
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    &__heading {
+      margin-bottom: 1.75rem;
+      font-size: clamp(2.25rem, 8vw, 3rem);
+    }
+
+    &__media {
+      aspect-ratio: 4 / 3;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story__social-link {
+    transition: none;
+  }
+}
