@@ -1,0 +1,94 @@
+.map-dialog {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+
+  overflow: hidden;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.72);
+  }
+
+  // Close control
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    z-index: 2;
+
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+
+    border: none;
+    background: transparent;
+    color: #fff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+  }
+
+  // Centrally positioned map
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(690px, calc(100vw - 2rem));
+    height: min(485px, calc(100dvh - 7rem));
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    overflow: hidden;
+  }
+
+  // Google Maps embed
+
+  &__iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .map-dialog {
+    &__close {
+      top: 1rem;
+      right: 1rem;
+    }
+
+    &__content {
+      width: calc(100vw - 1.5rem);
+      height: min(65dvh, 500px);
+    }
+  }
+}
