@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Menu from "./components/Menu/Menu";
 import Story from "./components/Story/Story";
 import Promotion from "./components/Promotion/Promotion";
+import Location from "./components/Location/Location";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           ctaText="Read more"
           ctaHref="#"
         />
+        <Location />
       </main>
     </>
   );
