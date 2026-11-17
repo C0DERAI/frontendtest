@@ -2,7 +2,7 @@
 
 .location {
   width: 100%;
-  padding-block: clamp(4rem, 7vw, 7rem);
+  padding-bottom: clamp(4rem, 7vw, 7rem);
   font-family: vars.$font-primary;
 
   background-color: vars.$color-white;
@@ -92,8 +92,6 @@
 
 @media (max-width: 768px) {
   .location {
-    padding-block: 4rem;
-
     &__container {
       grid-template-columns: 1fr;
       gap: 2.5rem;
@@ -104,8 +102,16 @@
       font-size: clamp(2.25rem, 8vw, 3rem);
     }
 
+    // Changing order. Display image first
     &__media {
+      order: 1;
       aspect-ratio: 4 / 3;
+    }
+
+    // Display text content after image
+    &__content {
+      order: 2;
+      padding-left: 0;
     }
   }
 }

@@ -103,9 +103,8 @@ export default function Header() {
             width="17"
             height="17"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
+            fill="white"
+
             strokeLinecap="round"
             strokeLinejoin="round"
           >
