@@ -18,14 +18,13 @@
 
     align-items: center;
     gap: clamp(2rem, 5vw, 5rem);
-
-    max-width: 1050px;
   }
 
   /* Text column */
 
   &__content {
     min-width: 0;
+    padding-left: clamp(2rem, 2vw, 4rem);
   }
 
   &__heading {
