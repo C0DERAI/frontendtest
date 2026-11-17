@@ -4,6 +4,7 @@ import Menu from "./components/Menu/Menu";
 import Story from "./components/Story/Story";
 import Promotion from "./components/Promotion/Promotion";
 import Location from "./components/Location/Location";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -38,6 +39,28 @@ function App() {
         />
         <Location />
       </main>
+      <Footer
+        phoneNumber="01234 567890"
+        socialLinks={[
+          {
+            label: "Facebook",
+            href: "https://www.facebook.com/YOUR_PROFILE",
+          },
+          {
+            label: "Instagram",
+            href: "https://www.instagram.com/YOUR_PROFILE",
+          },
+          {
+            label: "X",
+            href: "https://x.com/YOUR_PROFILE",
+          },
+          {
+            label: "LinkedIn",
+            href: "https://www.linkedin.com/company/YOUR_COMPANY",
+          },
+        ]}
+        attribution="Made by Williams Commerce"
+      />
     </>
   );
 }
